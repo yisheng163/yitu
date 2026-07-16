@@ -47,10 +47,7 @@ with gr.Blocks(title="简易聊天") as demo:
             chatbot = gr.ChatInterface(
                 fn=chat,
                 title="",
-                description="输入消息开始对话",
-                retry_btn="🔄 重试",
-                undo_btn="↩️ 撤销",
-                clear_btn="🗑️ 清空"
+                description="输入消息开始对话"
             )
         with gr.Column(scale=1):
             gr.Markdown("### 📦 模型信息")
