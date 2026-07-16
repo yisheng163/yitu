@@ -1,7 +1,6 @@
 .env
 .env.local
 .env.*.local
-app.py
 
 __pycache__/
 *.pyc
