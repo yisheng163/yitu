@@ -1,10 +1,12 @@
-from flask import Flask
+import gradio as gr
 
-app = Flask(__name__)
+def greet(name):
+    return f"Hello, {name}!"
 
-@app.route('/')
-def hello():
-    return '<h1>Hello, World!</h1>'
+with gr.Blocks() as demo:
+    gr.Markdown("# 最简单的 Gradio 应用")
+    name = gr.Textbox(label="输入名字")
+    output = gr.Textbox(label="输出")
+    gr.Button("问候").click(fn=greet, inputs=name, outputs=output)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=7860)
+demo.launch(server_name="0.0.0.0", server_port=7860)
