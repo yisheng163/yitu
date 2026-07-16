@@ -1,0 +1,17 @@
+.env
+.env.local
+.env.*.local
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+*.log
+logs/
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
